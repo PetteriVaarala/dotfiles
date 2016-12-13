@@ -59,7 +59,7 @@ set ruler
 syntax on
 
 " show location of cursor using a horizontal line.
-"set cursorline
+set cursorline
 
 " Height of the command bar
 set cmdheight=2
