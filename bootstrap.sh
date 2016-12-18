@@ -5,8 +5,14 @@
 files="vimrc vim"    # list of files/folders to symlink in homedir
 
 for file in $files; do
-    echo "Creating symlink to $file in home directory."
-    ln -s $PWD/.$file ~/.$file
+    if [ -f ~/.$file ]; then
+        echo ".$file already exists in home directory."
+    elif [ -d ~/.$file ]; then
+        echo ".$file already exists in home directory."
+    else
+        echo "Creating symlink to .$file in home directory."
+        ln -s $PWD/.$file ~/.$file
+    fi
 done
 
 echo "Bootstrap completed"
