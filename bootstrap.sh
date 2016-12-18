@@ -2,7 +2,7 @@
 # bootstrap.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 
-files="vimrc vim"    # list of files/folders to symlink in homedir
+files="vimrc vim bash_aliases"    # list of files/folders to symlink in homedir
 
 for file in $files; do
     if [ -f ~/.$file ]; then
