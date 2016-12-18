@@ -1,0 +1,12 @@
+# SublimeText project files
+/*.sublime-project
+*.sublime-workspace
+
+# Linux
+#.*
+!.gitignore
+*~
+
+# KDE
+.directory
+

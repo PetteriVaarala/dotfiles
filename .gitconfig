@@ -1,0 +1,26 @@
+[user]
+	name   = Petteri Vaarala
+    email  = petteri.vaarala@gmail.com
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore_global
+    autocrlf = input
+    safecrlf = true
+    quotepath = false
+
+[color]  # Ensure we get color
+    diff   = auto
+    branch = auto
+    status = auto
+
+[alias]  # shortcuts
+    st = status -s
+    stat = status
+    prettylog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    plog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    unstage = reset HEAD
+[merge]
+    tool = diffmerge
+[push]
+    default = tracking
+
