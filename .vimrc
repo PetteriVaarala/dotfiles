@@ -62,7 +62,10 @@ syntax on
 set cursorline
 
 " Height of the command bar
-set cmdheight=2
+"set cmdheight=2
+
+" Show status line always
+set laststatus=2
 
 " Enable 256 colors
 set t_Co=256
@@ -87,3 +90,25 @@ set hlsearch
 
 " Show matching brackets when text indicator is over them
 set showmatch
+
+
+"" Plugins ""
+""""""""""""""
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'itchyny/lightline.vim'
+
+" Initialize plugin system
+call plug#end()
+
+
+"" Plugins - Lightline ""
+"""""""""""""""""""""""""
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
