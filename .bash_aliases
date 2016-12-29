@@ -28,7 +28,8 @@ fi
 
  #alias irc='ssh zone-c.org -t screen -rd'
 alias irc='ssh zone-c.org -p 222'
- #alias irc='ssh zone-c.org'
+alias irc-terminal='gnome-terminal --window --profile=IRC --hide-menubar'
+#alias irc='ssh zone-c.org'
  #alias bigfiles='/home/maroach/Scripts/bigfiles.sh'
  #alias screen='screen-launcher'
 alias e='/opt/Sublime\ Text\ 2/sublime_text'
