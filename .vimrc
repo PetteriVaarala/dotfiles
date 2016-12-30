@@ -102,13 +102,3 @@ Plug 'itchyny/lightline.vim'
 " Initialize plugin system
 call plug#end()
 
-
-"" Plugins - Lightline ""
-"""""""""""""""""""""""""
-let g:lightline = {
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
