@@ -19,7 +19,7 @@ alias h='history|grep'
  #alias less='less -SMN'
 alias less='less -SM'
 
-if [[ $(uname -n) == *"solus"* ]];then
+if [[ $(lsb_release -d) == *"Solus"* ]];then
     alias up='sudo eopkg upgrade'
 elif [[ $(uname -n) == *"element"* ]];then
     alias up='sudo aptitude update && sudo aptitude full-upgrade'
