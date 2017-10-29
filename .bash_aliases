@@ -20,14 +20,15 @@ alias h='history|grep'
 alias less='less -SM'
 
 if [[ $(uname -n) == *"solus"* ]];then
-    alias up='sudo eopkg up'
+    alias up='sudo eopkg upgrade'
 elif [[ $(uname -n) == *"element"* ]];then
     alias up='sudo aptitude update && sudo aptitude full-upgrade'
     alias ppa='sudo add-apt-repository'
 fi
 
  #alias irc='ssh zone-c.org -t screen -rd'
-alias irc='ssh zone-c.org -p 222'
+ #alias irc='ssh zone-c.org -p 222'
+alias irc='ssh irssi'
 alias irc-terminal='gnome-terminal --window --profile=IRC --hide-menubar'
 #alias irc='ssh zone-c.org'
  #alias bigfiles='/home/maroach/Scripts/bigfiles.sh'
@@ -38,7 +39,7 @@ alias copy='rsync -avh --progress'
 alias kp='kp_comma-dot.sh'
 alias by='byobu'
 alias umountforce='umount -lf'
-alias diff=colordiff
+#alias diff=colordiff
 
 # reload bash aliases
 alias aliasreload="source ~/.bashrc"
@@ -61,4 +62,10 @@ alias myip='curl https://wtfismyip.com/text'
 
 alias menufix='killall slingshot-launcher'
 alias sfv='cksfv -f'
-alias ace='acestreamengine --lib-path /opt/acestream_3.0.2_ubuntu_14.04_x86_64/ --client-console'
+#alias ace='acestreamengine --lib-path /opt/acestream_3.0.2_ubuntu_14.04_x86_64/ --client-console'
+alias ace='/usr/share/acestream/acestreamengine --client-console'
+alias ace_paste='sleep 5 && xdotool type'
+
+alias sol_fetchYml='~/Solus-packages/common/Scripts/yauto.py'
+alias sol_updatePackage='/usr/share/ypkg/yupdate.py'
+
