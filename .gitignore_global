@@ -10,3 +10,6 @@
 # KDE
 .directory
 
+# dotenv oh-my-zsh plugin
+.env
+
