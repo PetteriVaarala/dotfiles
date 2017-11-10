@@ -21,6 +21,9 @@ alias less='less -SM'
 
 if [[ $(lsb_release -d) == *"Solus"* ]];then
     alias up='sudo eopkg upgrade'
+elif [[ $(lsb_release -d) == *"Ubuntu"* ]];then
+    alias up='sudo apt update && sudo apt full-upgrade'
+    alias ppa='sudo add-apt-repository'
 elif [[ $(uname -n) == *"element"* ]];then
     alias up='sudo aptitude update && sudo aptitude full-upgrade'
     alias ppa='sudo add-apt-repository'
