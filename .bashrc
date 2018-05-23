@@ -9,6 +9,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Add ~/bin to PATH
+export PATH=$HOME/bin:$PATH
+
 # Custom prompt
 # Based on default Solus prompt at /usr/share/defaults/etc/profile.d/50-prompt.sh
 FG="\[\033[38;5;111m\]"
@@ -22,3 +25,7 @@ unset AT
 unset HCOLOR
 shopt -s checkwinsize
 
+# virtualenvwrapper
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+  source /usr/bin/virtualenvwrapper.sh
+fi

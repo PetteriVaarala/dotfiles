@@ -66,6 +66,6 @@ alias sfv='cksfv -f'
 alias ace='/usr/share/acestream/acestreamengine --client-console'
 alias ace_paste='sleep 5 && xdotool type'
 
-alias sol_fetchYml='~/Solus-packages/common/Scripts/yauto.py'
+alias sol_fetchYml='~/Projects/Solus-packages/common/Scripts/yauto.py'
 alias sol_updatePackage='/usr/share/ypkg/yupdate.py'
 
