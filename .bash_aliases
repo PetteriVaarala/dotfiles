@@ -20,7 +20,7 @@ alias h='history|grep'
 alias less='less -SM'
 
 if [[ $(lsb_release -d) == *"Solus"* ]];then
-    alias up='sudo eopkg upgrade'
+    alias up='sudo eopkg upgrade && echo "Checking for broken packages.." && sudo eopkg check|grep -i broken'
 elif [[ $(lsb_release -d) == *"Ubuntu"* ]];then
     alias up='sudo apt update && sudo apt full-upgrade'
     alias ppa='sudo add-apt-repository'
@@ -37,7 +37,7 @@ alias irc-terminal='gnome-terminal --window --profile=IRC --hide-menubar'
  #alias bigfiles='/home/maroach/Scripts/bigfiles.sh'
  #alias screen='screen-launcher'
 alias e='/opt/Sublime\ Text\ 2/sublime_text'
-alias rmbackups='find . -name '*~' -exec rm {} \;'
+#alias rmbackups='find . -name '*~' -exec rm {} \;'
 alias copy='rsync -avh --progress'
 alias kp='kp_comma-dot.sh'
 alias by='byobu'
@@ -56,8 +56,8 @@ alias venvd='deactivate'
 alias nano='vim'
 
 # DOOOM
-alias doom1="chocolate-doom -iwad \"/media/Samsung2TB-2/Games/Retro PC games/Doom.REPACK-TOL/WAD/DOOM.WAD\""
-alias doom2="chocolate-doom -iwad \"/media/Samsung2TB-2/Games/Retro PC games/Doom.REPACK-TOL/WAD/Doom2.wad\""
+# alias doom1="chocolate-doom -iwad \"/media/Samsung2TB-2/Games/Retro PC games/Doom.REPACK-TOL/WAD/DOOM.WAD\""
+# alias doom2="chocolate-doom -iwad \"/media/Samsung2TB-2/Games/Retro PC games/Doom.REPACK-TOL/WAD/Doom2.wad\""
 
 alias smbstatus='watch smbstatus'
 
@@ -72,3 +72,6 @@ alias ace_paste='sleep 5 && xdotool type'
 alias sol_fetchYml='~/Projects/Solus-packages/common/Scripts/yauto.py'
 alias sol_updatePackage='/usr/share/ypkg/yupdate.py'
 
+alias subl-vault='EDITOR="subl --wait --new-window" ansible-vault edit'
+
+alias open='nautilus'

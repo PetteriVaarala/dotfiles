@@ -10,7 +10,12 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Add ~/bin to PATH
-export PATH=$HOME/bin:$PATH
+#export PATH=$HOME/bin:$PATH
+
+# Go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN:/usr/local/go/bin
 
 # Custom prompt
 # Based on default Solus prompt at /usr/share/defaults/etc/profile.d/50-prompt.sh
