@@ -22,6 +22,8 @@ set nobackup
 set nowb
 set noswapfile
 
+" Mouse disable
+set mouse=
 
 "" Tabs & Indent ""
 """""""""""""""""""
