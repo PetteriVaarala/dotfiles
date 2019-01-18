@@ -7,7 +7,7 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="solus"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime vagrant aws vault docker)
+plugins=(common-aliases git sublime docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,11 +85,25 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #alias psx="ps -ef|grep -v grep|grep -i"
 #alias vi="vim"
-source ~/.zsh_aliases
+if [[ -a ~/.zsh_aliases ]]; then
+    source ~/.zsh_aliases
+fi
 
 # virtualenv & virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+
+if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+elif [[ -a /usr/bin/virtualenvwrapper.sh ]]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
+
+#
+# Home related settings
+#
+if [[ -a ~/.zsh_home ]]; then
+    source ~/.zsh_home
+fi
 
 #
 # Work related settings
