@@ -51,7 +51,7 @@ ZSH_THEME="solus"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases git sublime docker)
+plugins=(common-aliases git sublime docker zsh-autosuggestions zsh-solus-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,6 +87,9 @@ source $ZSH/oh-my-zsh.sh
 #alias vi="vim"
 if [[ -a ~/.zsh_aliases ]]; then
     source ~/.zsh_aliases
+fi
+if [[ -a ~/.bash_aliases ]]; then
+    source ~/.bash_aliases
 fi
 
 # virtualenv & virtualenvwrapper

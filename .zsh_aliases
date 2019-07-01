@@ -2,4 +2,4 @@ alias ll="ls -l"
 alias psx="ps -ef|grep -v grep|grep -i"
 alias vi="vim"
 alias diff="diff --color"
-
+alias rg="rg -i"
