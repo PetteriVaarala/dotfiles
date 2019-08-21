@@ -7,6 +7,7 @@
 	autocrlf = false
     safecrlf = true
     quotepath = false
+    whitespace = -trailing-space,-indent-with-non-tab,-tab-in-indent
 
 [color]  # Ensure we get color
     diff   = auto
@@ -16,10 +17,16 @@
 [alias]  # shortcuts
     st = status -s
     prettylog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    plog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    plog = !git --no-pager log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n20
+    plog-24h = !git --no-pager log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --since='24 hours ago'
+    plog-all = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     unstage = reset HEAD
+    co = checkout
 [merge]
     tool = diffmerge
 [push]
     default = tracking
-
+[pull]
+    rebase = true
+[init]
+    templatedir = ~/.git-templates
