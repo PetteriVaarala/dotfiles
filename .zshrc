@@ -92,15 +92,6 @@ if [[ -a ~/.bash_aliases ]]; then
     source ~/.bash_aliases
 fi
 
-# virtualenv & virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-
-if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-elif [[ -a /usr/bin/virtualenvwrapper.sh ]]; then
-    source /usr/bin/virtualenvwrapper.sh
-fi
-
 #
 # Home related settings
 #
@@ -114,3 +105,12 @@ fi
 if [[ -a ~/.zsh_work ]]; then
     source ~/.zsh_work
 fi
+
+# virtualenv & virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+elif [[ -a /usr/bin/virtualenvwrapper.sh ]]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
+
