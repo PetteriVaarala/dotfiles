@@ -20,7 +20,8 @@ alias h='history|grep'
 alias less='less -SM'
 
 if [[ $(lsb_release -d) == *"Solus"* ]];then
-    alias up='sudo eopkg upgrade && echo "Checking for broken packages.." && sudo eopkg check|grep -i broken'
+    # alias up='sudo eopkg upgrade && echo "Checking for broken packages.." && sudo eopkg check|grep -i broken'
+    alias up='update'
 elif [[ $(lsb_release -d) == *"Ubuntu"* ]];then
     alias up='sudo apt update && sudo apt full-upgrade'
     alias ppa='sudo add-apt-repository'
@@ -69,8 +70,8 @@ alias sfv='cksfv -f'
 alias ace='/usr/share/acestream/acestreamengine --client-console'
 alias ace_paste='sleep 5 && xdotool type'
 
-alias sol_fetchYml='~/Projects/Solus-packages/common/Scripts/yauto.py'
-alias sol_updatePackage='/usr/share/ypkg/yupdate.py'
+#alias sol_fetchYml='~/Projects/Solus-packages/common/Scripts/yauto.py'
+#alias sol_updatePackage='/usr/share/ypkg/yupdate.py'
 
 alias subl-vault='EDITOR="subl --wait --new-window" ansible-vault edit'
 

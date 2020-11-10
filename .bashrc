@@ -34,3 +34,7 @@ shopt -s checkwinsize
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
   source /usr/bin/virtualenvwrapper.sh
 fi
+
+# complete -C /home/maroach/bin/nomad nomad
+
+# source /home/maroach/.config/broot/launcher/bash/br
