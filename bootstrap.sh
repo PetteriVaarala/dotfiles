@@ -3,7 +3,7 @@
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 
 # list of files/folders to symlink in homedir
-files="vimrc vim bashrc bash_aliases gitconfig gitignore_global"
+files="bash_aliases bashrc byobu gitconfig gitignore_global vim vimrc zsh_aliases zsh_home zshrc"
 
 for file in $files; do
     if [ -f ~/.$file ]; then
