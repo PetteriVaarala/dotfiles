@@ -4,10 +4,6 @@ export KUBECONFIG=./kubeconfig
 # kubectl krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# python3 for virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENV_PYTHON=/usr/bin/python3
-
 # Linux Brew
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
@@ -19,22 +15,14 @@ export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 # Aliases
 alias code="code-oss"
 
-# Load pyenv automatically
-eval "$(pyenv init -)"
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+# pip, do not install if not in virtualenv
+export PIP_REQUIRE_VIRTUALENV=true
 
-# pyenv-virtualenv plugin
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
-## workon on dir change
-# Support for bash
-PROMPT_COMMAND='prompt'
-# Mirrored support for zsh. See: https://superuser.com/questions/735660/ 
-precmd() { eval "$PROMPT_COMMAND" }
-function prompt()
-{
-  if [ "$PWD" != "$MYOLDPWD" ]; then
-    MYOLDPWD="$PWD"
-    test -e .venv && workon `cat .venv`
-  fi
-}
+# Set vim as default editor
+export EDITOR='vi'
 

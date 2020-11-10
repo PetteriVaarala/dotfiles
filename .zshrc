@@ -22,6 +22,9 @@ ZSH_THEME="solus"
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
+# Uncomment the following line if pasting URLs and other text is messed up.                                                                 
+DISABLE_MAGIC_FUNCTIONS=true                                                                                                              
+
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
@@ -51,7 +54,7 @@ ZSH_THEME="solus"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases git sublime docker zsh-autosuggestions zsh-solus-completions kubectl)
+plugins=(common-aliases git sublime docker zsh-autosuggestions zsh-solus-completions kubectl dotenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,10 +110,10 @@ if [[ -a ~/.zsh_work ]]; then
 fi
 
 # virtualenv & virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-elif [[ -a /usr/bin/virtualenvwrapper.sh ]]; then
-    source /usr/bin/virtualenvwrapper.sh
-fi
+#export WORKON_HOME=$HOME/.virtualenvs
+#if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
+#    source /usr/local/bin/virtualenvwrapper.sh
+#elif [[ -a /usr/bin/virtualenvwrapper.sh ]]; then
+#    source /usr/bin/virtualenvwrapper.sh
+#fi
 
