@@ -13,3 +13,6 @@
 # dotenv oh-my-zsh plugin
 .env
 
+# Solus packaging
+*.eopkg
+
